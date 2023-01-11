@@ -1,6 +1,8 @@
 package com.greedy.hellospring;
 
 import com.greedy.hellospring.repository.JdbcMemberRepository;
+import com.greedy.hellospring.repository.JdbcTemplateMemberRepository;
+import com.greedy.hellospring.repository.MemberRepository;
 import com.greedy.hellospring.repository.MemoryBoardRepository;
 import com.greedy.hellospring.service.BoardService;
 import com.greedy.hellospring.service.MemberService;
@@ -27,9 +29,10 @@ public class SpringConfig {
     }
 
     @Bean
-    public JdbcMemberRepository memberRepository() {
+    public MemberRepository memberRepository() {
 //        return new MemoryMemberRepository();
-          return new JdbcMemberRepository(dataSource);
+//          return new JdbcMemberRepository(dataSource);
+        return new JdbcTemplateMemberRepository(dataSource);
     }
 
     @Bean
