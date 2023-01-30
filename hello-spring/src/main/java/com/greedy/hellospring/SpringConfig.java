@@ -1,27 +1,22 @@
 package com.greedy.hellospring;
 
-import com.greedy.hellospring.repository.JdbcMemberRepository;
-import com.greedy.hellospring.repository.JdbcTemplateMemberRepository;
-import com.greedy.hellospring.repository.MemberRepository;
-import com.greedy.hellospring.repository.MemoryBoardRepository;
+import com.greedy.hellospring.repository.*;
 import com.greedy.hellospring.service.BoardService;
 import com.greedy.hellospring.service.MemberService;
+import jakarta.persistence.EntityManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import javax.sql.DataSource;
-
 @Configuration
 public class SpringConfig {
 
+    private final EntityManager em;
+    // 생성자 주입 방식
     @Autowired
-    private final DataSource dataSource;
-
-    public SpringConfig(DataSource dataSource) {
-        this.dataSource = dataSource;
+    public SpringConfig(EntityManager em) {
+        this.em = em;
     }
-
 
     @Bean
     public MemberService memberService() {
@@ -30,9 +25,10 @@ public class SpringConfig {
 
     @Bean
     public MemberRepository memberRepository() {
-//        return new MemoryMemberRepository();
+//          return new MemoryMemberRepository();
 //          return new JdbcMemberRepository(dataSource);
-        return new JdbcTemplateMemberRepository(dataSource);
+//          return new JdbcTemplateMemberRepository(dataSource);
+           return new JpaMemberRepository(em);
     }
 
     @Bean
