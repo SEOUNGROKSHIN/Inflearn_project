@@ -18,6 +18,7 @@ public class Order {
      * 계산식 기능
      * item 가격 - 할인 가격 = 전체가격
      * */
+
     public int calculatePrice() {
         return itemPrice - discountPrice;
     }
