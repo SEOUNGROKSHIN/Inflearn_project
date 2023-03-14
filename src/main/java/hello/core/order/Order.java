@@ -64,6 +64,5 @@ public class Order {
                 ", discountPrice=" + discountPrice +
                 '}';
 
-
     }
 }
