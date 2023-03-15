@@ -13,19 +13,12 @@ import org.springframework.context.annotation.FilterType;
 
 @Configuration
 @ComponentScan(
-        basePackages = "hello.core.member",
-        basePackageClasses = AutoAppConfig.class,
+//        basePackages = "hello.core.member",
+//        basePackageClasses = AutoAppConfig.class,
         excludeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION , classes = Configuration.class)
 )
 public class AutoAppConfig {
 
-    @Autowired MemberRepository memberRepository;
-    @Autowired DiscountPolicy discountPolicy;
-
-    @Bean
-    OrderService orderService(MemberRepository memberRepository , DiscountPolicy discountPolicy) {
-        return new OrderServiceImpl(memberRepository , discountPolicy);
-    }
     @Bean(name = "memoryMemberRepository")
     MemberRepository memberRepository() {
         return new MemoryMemberRepository();
