@@ -44,4 +44,14 @@ public class NetworkClient implements InitializingBean , DisposableBean {
         System.out.println("NetworkClient.close");
         disconnect();
     }
+
+    @Override
+    public void destroy() throws Exception {
+
+    }
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+
+    }
 }
