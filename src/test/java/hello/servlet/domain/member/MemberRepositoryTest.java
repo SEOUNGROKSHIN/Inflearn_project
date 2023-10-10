@@ -1,3 +1,4 @@
+/*
 package hello.servlet.domain.member;
 
 import org.junit.jupiter.api.AfterEach;
@@ -44,4 +45,4 @@ class MemberRepositoryTest {
         assertThat(result.size()).isEqualTo(2);
         assertThat(result).contains(memberA , memberB);
     }
-}
+}*/

@@ -29,7 +29,7 @@ public class MemberSaveServlet extends HttpServlet {
         response.setCharacterEncoding("utf-8");
         PrintWriter w = response.getWriter();
 
-        w.write("<html>\n" +
+        /*w.write("<html>\n" +
                 "<head>\n" +
                 " <meta charset=\"UTF-8\">\n" +
                 "</head>\n" +
@@ -43,5 +43,5 @@ public class MemberSaveServlet extends HttpServlet {
                 "<a href=\"/index.html\">메인</a>\n" +
                 "</body>\n" +
                 "</html>");
-    }
-}
+    }/**/
+}}
