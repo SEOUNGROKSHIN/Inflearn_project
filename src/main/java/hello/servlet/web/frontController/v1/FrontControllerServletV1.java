@@ -1,4 +1,4 @@
-package hello.servlet.web.frontController;
+package hello.servlet.web.frontController.v1;
 
 import hello.servlet.web.frontController.v1.ControllerV1;
 import hello.servlet.web.frontController.v1.controller.MemberFormControllerV1;
