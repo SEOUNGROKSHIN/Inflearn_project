@@ -1,4 +1,4 @@
-/*
+
 package hello.servlet.basic.request;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -31,4 +31,4 @@ public class RequestBodyJsonServlet extends HttpServlet {
         System.out.println("helloData.getAge() = " + helloData.getAge());
     }
 }
-*/
+
