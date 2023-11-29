@@ -50,6 +50,7 @@ public class RequestBodyStringController {
     @PostMapping("/request-body-string-v4")
     public String requestBodyStringV4(@RequestBody String messageBody) {
         log.info("messageBody{}", messageBody);
+
         return "ok";
     }
 }
