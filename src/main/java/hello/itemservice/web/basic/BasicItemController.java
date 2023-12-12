@@ -68,10 +68,21 @@ public class BasicItemController {
         itemRepository.save(item);
         return "basic/item";
     }
-    @PostMapping("/add")
+//    @PostMapping("/add")
     public String addItemV4(Item item) {
         itemRepository.save(item);
         return "basic/item";
+    }
+    // PRG 패턴 적용
+    /**
+     * P : Post
+     * R : Redirect
+     * G : Get
+     * */
+    @PostMapping("/add")
+    public String addItemV5(Item item) {
+        itemRepository.save(item);
+        return "redirect:/basic/items/" + item.getId();
     }
 
     @GetMapping("/{itemId}/edit")
