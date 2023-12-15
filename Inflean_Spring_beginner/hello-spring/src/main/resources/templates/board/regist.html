@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="container">
+
+  <form action="/board/regist" method="post">
+    <div class="form-group">
+      <label for="title">제목</label>
+      <input type="text" id="title" name="title" placeholder="제목을 입력하세요">  <!--서버로 넘어올 때 name은 키가 된다.-->
+    </div>
+    <div class="form-group">
+      <label for="content">내용</label>
+      <input type="text" id="content" name="content">
+    </div>
+    <button type="submit">등록</button>
+  </form>
+
+</div> <!-- Container -->
+</body>
+</html>
